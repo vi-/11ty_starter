@@ -1,0 +1,16 @@
+{
+  "name": "EleventyStarter",
+  "version": "0.1",
+  "description": "A simple starter template with 11ty, Pug and Gulp",
+  "author": "Victor Ivanov",
+  "scripts": {
+    "start": "yarn run dev",
+    "dev": "gulp dev & ELEVENTY_ENV=dev eleventy --serve"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglify": "^3.0.2",
+    "jstransformer-markdown-it": "^2.1.0"
+  }
+}
