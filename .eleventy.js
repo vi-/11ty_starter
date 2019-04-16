@@ -5,6 +5,15 @@ module.exports = ( config ) => {
   config.addLayoutAlias('default', 'layouts/base.pug');
   config.addLayoutAlias('post', 'layouts/post.pug');
 
+  // Create & Add custom filter for Pug
+  config.setPugOptions( {
+    filters : {
+      'upperCase' : function( input ) {
+        return input.toUpperCase();
+      }
+    }
+  });
+
   // config.addPassthroughCopy('assets');
   env = (env=="seed") ? "prod" : env;
   return {
