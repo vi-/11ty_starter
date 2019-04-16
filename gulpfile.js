@@ -8,7 +8,7 @@ const uglify  = require( 'gulp-uglify' ),
 const js = () => {
   return src( './src/js/script.js' )
     .pipe( uglify() )
-    .pipe( dest( './assets' ) );
+    .pipe( dest( './src/site/_includes/assets' ) );
 }
 
 const css = () => {
@@ -17,7 +17,7 @@ const css = () => {
       outputStyle: 'compressed'
     })
     .on( 'error', sass.logError ))
-    .pipe( dest( './assets' ) );
+    .pipe( dest( './src/site/_includes/assets' ) );
 }
 
 const watchFiles = () => {

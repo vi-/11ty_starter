@@ -1,0 +1,19 @@
+doctype html
+html(lang='en')
+  head
+    title #{title || 'Default title'}
+    style
+      include:clean-css /assets/normalize.css
+      include:clean-css /assets/style.css
+  body
+    nav.navigation
+      ul
+        li
+          a(href="../") home
+        li
+          a(href="/about") about
+    .container
+      h1 #{subtitle}
+      block content
+      - if (content)
+        .content!= content
